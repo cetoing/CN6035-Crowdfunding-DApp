@@ -33,13 +33,13 @@ const MyContributions = () => {
                             <div className='p-6 w-8 h-8 mx-auto my-auto rounded-md bg-slate-300 '></div>
                         </div>
                         <div className='lg:w-4/5'>
-                            <Link href={`/project-details/${data.projectAddress}`}><p className='text-md font-bold text-gray-800 w-40 truncate cursor-pointer '>{data.projectAddress}</p></Link>
+                            <Link href={`/project-details/${data.projectAddress}`} passHref><p className='text-md font-bold text-gray-800 w-40 truncate cursor-pointer '>{data.projectAddress}</p></Link>
                             <p className='text-sm font-bold text-gray-500'>{data.amount} ETH</p>
                         </div>
                     </div>
                 ))
             :
-            <p className='text-center'>You didn't contributed in any project yet !</p>
+            <p className='text-center'>You didn&apos;t contributed in any project yet !</p>
         :
         <div className="w-full"> <Loader/></div>
        

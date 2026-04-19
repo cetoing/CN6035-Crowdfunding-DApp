@@ -19,7 +19,7 @@ const Navbar = () => {
                 {/* <!-- Mobile menu button--> */}
                 <button type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-greay hover:bg-[#F7C984] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" onClick={()=>setOpenMenu(!openMenu)}>
                 <span className="sr-only">Open main menu</span>
-                <i className="fa-solid fa-bars"></i>
+                <span aria-hidden="true">&#9776;</span>
                 </button>
             </div>
             <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
@@ -28,8 +28,8 @@ const Navbar = () => {
                 </div>
                 <div className="hidden sm:block sm:ml-6">
                 <div className="flex space-x-4">
-                    <Link href="/dashboard"  ><span className={`${router.pathname === "/dashboard"?"bg-[#F7C984]":""} text-greay px-3 py-2 rounded-md text-sm font-medium hover:cursor-pointer hover:bg-[#F7C984] hover:text-greay`}>Dashboard</span></Link>
-                    <Link href="/my-contributions"><span className={`${router.pathname === "/my-contributions"?"bg-[#F7C984]":""} text-greay px-3 py-2 rounded-md text-sm font-medium hover:cursor-pointer hover:bg-[#F7C984] hover:text-greay`}>My contribution</span></Link>
+                    <Link href="/dashboard" passHref><span className={`${router.pathname === "/dashboard"?"bg-[#F7C984]":""} text-greay px-3 py-2 rounded-md text-sm font-medium hover:cursor-pointer hover:bg-[#F7C984] hover:text-greay`}>Dashboard</span></Link>
+                    <Link href="/my-contributions" passHref><span className={`${router.pathname === "/my-contributions"?"bg-[#F7C984]":""} text-greay px-3 py-2 rounded-md text-sm font-medium hover:cursor-pointer hover:bg-[#F7C984] hover:text-greay`}>My contribution</span></Link>
                 </div>
                 </div>
             </div>

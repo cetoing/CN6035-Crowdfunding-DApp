@@ -5,8 +5,8 @@ const etherToWei = (n) =>{
   return ethers.utils.parseUnits(n,'ether')
 }
 
-const dateToUNIX = (date) => {
-  return Math.round(new Date(date).getTime() / 1000).toString()
+const getFutureDeadline = () => {
+  return (Math.round(Date.now() / 1000) + 30 * 24 * 60 * 60).toString()
 }
 
 describe("Project", () => {
@@ -20,7 +20,7 @@ describe("Project", () => {
 
       const creator = address1.address;
       const minimumContribution = etherToWei("1");
-      const deadline = dateToUNIX('2023-05-22');
+      const deadline = getFutureDeadline();
       const targetContribution = etherToWei("10");
       const projectTitle = "Testing project";
       const projectDes = "Testing project description"

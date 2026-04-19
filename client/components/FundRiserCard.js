@@ -79,7 +79,7 @@ const FundRiserCard = ({props,pushWithdrawRequests}) => {
   return (
     <div className="card relative overflow-hidden my-4">
     <div className={`ribbon ${colorMaker(props.state)}`}>{props.state}</div>
-    <Link href={`/project-details/${props.address}`} >
+    <Link href={`/project-details/${props.address}`} passHref>
       <h1 className="font-sans text-xl text-gray font-semibold hover:text-sky-500 hover:cursor-pointer">{props.title}</h1>
     </Link>
     <p className="font-sans text-sm text-stone-800 tracking-tight">{props.description}</p>

@@ -5,8 +5,8 @@ const etherToWei = (n) =>{
   return ethers.utils.parseUnits(n,'ether')
 }
 
-const dateToUNIX = (date) => {
-  return Math.round(new Date(date).getTime() / 1000)
+const getFutureDeadline = () => {
+  return Math.round(Date.now() / 1000) + 30 * 24 * 60 * 60;
 }
 
 describe("Crowdfunding", () => {
@@ -27,7 +27,7 @@ describe("Crowdfunding", () => {
     it("Start a project", async function () {
 
       const minimumContribution=etherToWei('1');
-      const deadline=dateToUNIX('2022-04-25');
+      const deadline=getFutureDeadline();
       const targetContribution=etherToWei('100');
       const projectTitle='Testing title';
       const projectDesc='Testing description';
@@ -56,7 +56,7 @@ describe("Crowdfunding", () => {
     it("Get data", async function () {
 
       const minimumContribution=etherToWei('1');
-      const deadline=dateToUNIX('2022-04-25');
+      const deadline=getFutureDeadline();
       const targetContribution=etherToWei('100');
       const projectTitle='Testing title';
       const projectDesc='Testing description';
