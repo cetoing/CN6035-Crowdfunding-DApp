@@ -19,6 +19,7 @@ This project is a crowdfunding decentralized application using:
 The following small changes were made to verify and improve the project for the coursework demonstration:
 
 - Updated stale 2022/2023 test deadlines to use future timestamps, allowing the contract tests to run correctly in 2026.
+- Added a guard around `window.ethereum` listener registration so the app can open safely before MetaMask is injected.
 - Removed a synchronous external Font Awesome script from `_document.js` and replaced the mobile menu icon with a local text character.
 - Added `passHref` to several Next.js `Link` components to resolve lint issues.
 - Escaped an apostrophe in `my-contributions.js` to satisfy React linting.
@@ -33,6 +34,7 @@ These checks were completed locally:
 - `npx.cmd eslint .` in `client`: passed with warnings only
 - `npm.cmd run build` in `client`: passed using `NODE_OPTIONS=--openssl-legacy-provider`
 - Local frontend runtime: returned HTTP `200` at `http://127.0.0.1:3000`
+- UI demo flow: created a local campaign and contributed ETH through the frontend
 
 ## Local Demo Notes
 
@@ -66,4 +68,3 @@ Use MetaMask with:
 
 - RPC URL: `http://127.0.0.1:8545`
 - Chain ID: `31337`
-

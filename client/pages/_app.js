@@ -31,10 +31,17 @@ function MyApp({ Component, pageProps }) {
   Router.events.on("routeChangeError",()=> NProgress.done())
   
   useEffect(() => {
-    // listen for account changes
+    if (!window.ethereum) {
+      return;
+    }
+
     window.ethereum.on('accountsChanged', chainOrAccountChangedHandler);
-    // Listen for chain change
     window.ethereum.on('chainChanged', chainOrAccountChangedHandler);
+
+    return () => {
+      window.ethereum.removeListener('accountsChanged', chainOrAccountChangedHandler);
+      window.ethereum.removeListener('chainChanged', chainOrAccountChangedHandler);
+    }
   }, [])
   
   

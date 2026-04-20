@@ -77,6 +77,7 @@ The frontend is implemented in the `client` directory. Important areas include:
 The original repository was adapted and verified for the 2026 coursework environment:
 
 - Fixed stale 2022/2023 test deadlines by replacing them with future timestamps, allowing the test suite to run correctly in 2026.
+- Added a MetaMask availability guard in `_app.js` so the application no longer crashes when opened in a browser without an injected `window.ethereum` provider.
 - Removed a synchronous external Font Awesome script and replaced the mobile menu icon with a local character.
 - Added `passHref` to Next.js `Link` components where required.
 - Escaped an apostrophe in JSX to satisfy React linting.
@@ -171,6 +172,7 @@ The following checks were completed locally:
 | `npx.cmd eslint .` in `client` | Passed with warnings only |
 | `npm.cmd run build` in `client` | Passed with `NODE_OPTIONS=--openssl-legacy-provider` |
 | Local frontend runtime | HTTP `200` at `http://127.0.0.1:3000` |
+| UI demo flow | Created a campaign and contributed ETH through the local frontend |
 
 ## Known Limitations
 
@@ -181,4 +183,3 @@ The following checks were completed locally:
 - ESLint reports remaining React hook dependency warnings.
 
 These limitations are discussed in the coursework technical report as part of the code quality and critical evaluation sections.
-
