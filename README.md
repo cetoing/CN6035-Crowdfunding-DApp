@@ -4,7 +4,7 @@ This repository contains the CN6035 Mobile and Distributed Systems coursework im
 
 https://github.com/spandan114/Crowdfunding-DAPP
 
-The project is a crowdfunding decentralized application (DApp). Users can create fundraising campaigns, contribute ETH through MetaMask, and approve withdrawal requests through contributor voting. The application combines a web front end with Solidity smart contracts deployed to a local Hardhat blockchain.
+The initiative is a decentralised application (DApp) for crowdfunding. Users may establish fundraising campaigns, donate ETH using MetaMask, and authorise withdrawal requests by contributor voting. The application integrates a web front end with Solidity smart contracts executed on a local Hardhat blockchain.
 
 ## Coursework Relevance
 
