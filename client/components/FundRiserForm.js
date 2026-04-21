@@ -33,7 +33,7 @@ const FundRiserForm = () => {
         setTargetedContributionAmount("")
         setMinimumContributionAmount("")
         setDeadline("")
-        toastSuccess("Fund rising started 🎉");
+        toastSuccess("Fundraising campaign started");
       }
 
        const onError = (error) =>{
@@ -55,7 +55,7 @@ const FundRiserForm = () => {
 
   return (
     <>
-        <h1 className="font-sans font-bold text-xl">Start a fund riser fot free</h1>
+        <h1 className="font-sans font-bold text-xl">Start a fundraiser</h1>
         <form onSubmit={(e)=>riseFund(e)}>
             <div className="form-control my-1">
                 <label className="text-sm text-gray-700">Title :</label>
@@ -66,7 +66,7 @@ const FundRiserForm = () => {
                 <textarea placeholder="Type here" className="form-control-input border-neutral-400 focus:ring-neutral-200" value={description} onChange={(e)=>setDescription(e.target.value)} required></textarea>
             </div>
             <div className="form-control my-1">
-                <label className="text-sm text-gray-700">Targeted contribution amount :</label>
+                <label className="text-sm text-gray-700">Target contribution amount :</label>
                 <input type="number" placeholder="Type here" className="form-control-input border-neutral-400 focus:ring-neutral-200" value={targetedContributionAmount} onChange={(e)=>setTargetedContributionAmount(e.target.value)} required/>
             </div>
             <div className="form-control my-1">
@@ -78,7 +78,7 @@ const FundRiserForm = () => {
                 <input type="date" placeholder="Type here" className="form-control-input border-neutral-400 focus:ring-neutral-200" value={deadline} onChange={(e)=>setDeadline(e.target.value)} required/>
             </div>
 
-            <button className="p-2 w-full bg-[#F56D91] text-white rounded-md hover:bg-[#d15677]" disabled={btnLoading} >{btnLoading?"Loading...":"Rise fund"}</button>
+            <button className="p-2 w-full bg-[#F56D91] text-white rounded-md hover:bg-[#d15677]" disabled={btnLoading} >{btnLoading?"Loading...":"Start Campaign"}</button>
         </form>
     </>
   )

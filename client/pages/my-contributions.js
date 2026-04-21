@@ -39,7 +39,7 @@ const MyContributions = () => {
                     </div>
                 ))
             :
-            <p className='text-center'>You didn&apos;t contributed in any project yet !</p>
+            <p className='text-center'>You haven&apos;t contributed to any projects yet.</p>
         :
         <div className="w-full"> <Loader/></div>
        
